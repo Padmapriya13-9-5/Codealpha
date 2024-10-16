@@ -1,0 +1,127 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>CALCULATOR</title>
+        <link rel="stylesheet" href="calcistyle.css">
+    </head>
+    <body>
+<div class="calci">
+    <div id="box">
+            <div class="color">
+                <form>
+            <input type="text" name="res" id="res" ><br><hr>
+            <div class="btn">
+            <input type="button" value='C'  onclick="form.res.value=''" id="clear">
+            <input type="button" value='%'  onclick="form.res.value+='%'">
+            <input type="button" value='AC' onclick="form.res.value=''" id="ac">
+            <input type="button" value='/'  onclick="form.res.value+='/'">
+            <br>
+            <input type="button" value='7' onclick="form.res.value+='7'">
+            <input type="button" value='8' onclick="form.res.value+='8'">
+            <input type="button" value='9' onclick="form.res.value+='9'">
+            <input type="button" value='*' onclick="form.res.value+='*'">
+            <br>
+            <input type="button" value='4' onclick="form.res.value+='4'">
+            <input type="button" value='5' onclick="form.res.value+='5'">
+            <input type="button" value='6' onclick="form.res.value+='6'">
+            <input type="button" value='-' onclick="form.res.value+='-'">
+            <br>
+            <input type="button" value='1' onclick="form.res.value+='1'">
+            <input type="button" value='2' onclick="form.res.value+='2'">
+            <input type="button" value='3' onclick="form.res.value+='3'">
+            <input type="button" value='+' onclick="form.res.value+='+'">
+            <br>
+            <input type="button" value='00' onclick="solve('00')">
+            <input type="button" value='0' onclick="solve('0')">
+            <input type="button" value='.' onclick="solve('.')">
+            <input type="button" value='=' onclick="form.res.value=eval(form.res.value)">
+            </form>
+    </div>
+</div>
+<script src="calci.js"></script>
+</body>
+</html>
+
+
+css
+
+
+*{
+    padding: 0;
+}
+body{
+    background-color:plum;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.color{
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 15px;
+    height: 400px;
+    width: 400px;
+    border-radius: 7px;
+}
+.color input[type='text']{
+    height:80px;
+    width:88%;
+    top:5px;
+    padding: 5px;
+    border: 5px solid black;
+    border-radius: 25px;
+    display: flex;
+    margin: auto;
+    color: black;
+    outline:none;
+    text-align: right;
+    font-size: 30px;
+    position: relative;
+}
+.btn input[type='button']{
+    width:90px;
+    padding: 5px;
+    margin: 2px;
+    left:13px;
+    top:20px;
+    height: 40px;
+    border-radius: 500vh;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    background-color:black;
+}
+.btn input[type='button']:hover{
+    background-color:deepskyblue;
+    color: white;
+}
+#clear{
+    background-color: green;
+}
+#ac{
+    background-color: rgba(255, 0, 0, 0.764);
+}
+
+
+Javascript 
+
+
+function solve(val){
+const v=document.getElementById('res');
+v.value+=val;
+}
+function res()
+{
+const num1=document.getElementById('res').value;
+num2=eval(num1);
+num2=document.getElementById('res').value;
+}
+function clear()
+{
+   const clr=document.getElementById('res');
+   clr.value=''; 
+}
