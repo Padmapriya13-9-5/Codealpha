@@ -8,6 +8,8 @@ Domain: web development
 
 Duration: October 1.10.2024-31.10.2024
 
+Task -1 (calculator)
+
 Overview of the Project:-
 
  It is a simple calculator to perform arithmetic operations using HTML,CSS, JAVASCRIPT.
